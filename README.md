@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Nuxt 3 Minimal Starter
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
@@ -41,6 +42,10 @@ npm run preview
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+=======
+# nuxt1-randomName
+Nuxt App Random name generator
+>>>>>>> 0522490f3256d17a4dbc71ded82ce8ec1f06ee38
 =======
 # nuxt1-randomName
 Nuxt App Random name generator
