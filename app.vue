@@ -1,20 +1,5 @@
 <script setup lang="ts">
-  enum Gender {
-    GIRL = 'Girl',
-    BOY = 'Boy',
-    UNISEX = 'Unisex'
-  }
-
-  enum Popularity {
-    TRENDY = 'Trendy',
-    UNIQUE = 'Unique'
-  }
-
-  enum Length {
-    SHORT = 'Short',
-    LONG = 'Long',
-    ALL = 'All'
-  }
+  import {Gender, Popularity, Length, names} from '@/data'
 
   interface OptionsState {
     gender: Gender,
@@ -27,12 +12,28 @@
     popularity: Popularity.UNIQUE,
     length: Length.LONG
   })
+  
+  const generatedName = ref<String[]>([])
+
+  const filterName = ()=>{
+    const element = names.filter( name=> options.gender === name.gender)
+      .filter(name => name.popularity === options.popularity)
+      .filter(name =>{
+        if(options.length === Length.ALL) return true
+        else return name.length === options.length
+      })
+
+    console.log(element)
+  }
+
+  
 
 </script>
 <template>
   <div class="container">
     <h1>Baby Name Generator</h1>
     <p>Choose your options and click the "Find Names" buttom below</p>
+
     <div class="options-container">
       <div class="option-container">
         <h4>1) Choose a gender</h4>
@@ -108,7 +109,13 @@
           </button>
         </div>
       </div>
+
+      <button class="primary" @click="filterName">Find Names</button>
+
     </div>
+    
+    {{generatedName}}
+
   </div>
 </template>
 
@@ -163,4 +170,14 @@
     background-color: rgb(249, 87, 89);
     color: white;
   }
+  .primary {
+  background-color: rgb(249, 87, 89);
+  color: white;
+  border-radius: 6.5rem;
+  border: none;
+  padding: 0.75rem 4rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
 </style>
