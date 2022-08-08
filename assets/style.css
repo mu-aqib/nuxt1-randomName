@@ -1,0 +1,88 @@
+html,body{
+    /* background-color: aliceblue !important; */
+}
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    color:  #002478ab;
+    max-width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.options-container {
+    background-color: #d1e8f59e;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    width: 95%;
+    margin: 10px auto;
+    position: relative;
+    box-shadow: rgb(226 241 249) 0px 8px 24px;
+}
+
+.option-container {
+    margin-bottom: 2rem;
+}
+
+.option {
+    background: white;
+    outline: 0.15rem solid #03a8f526;
+    border: none;
+    padding: 0.75rem;
+    width: 12rem;
+    font-size: 1rem;
+    color: rgb(27, 60, 138);
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.option-left {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.option-right {
+    border-radius: 0 1rem 1rem 0;
+}
+
+.option-active {
+    background-color: #92c9e6;
+    color: white;
+}
+
+.primary {
+    background-color: #6ea8c7;
+    color: white;
+    border-radius: 6.5rem;
+    border: none;
+    padding: 0.75rem 4rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 1rem;
+}
+
+.table td,
+.table th {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+.table th {
+    background-color: #92c9e6;
+    color: #ffffff;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #d1e8f5;
+}
