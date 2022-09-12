@@ -8,10 +8,11 @@
 
   interface OptionsState {
     gender: Gender,
-      popularity: Popularity,
-      length: Length
+    popularity: Popularity,
+    length: Length
   }
 
+  // reactive options 
   const options = reactive < OptionsState > ({
     gender: Gender.BOY,
     popularity: Popularity.UNIQUE,
@@ -21,6 +22,7 @@
   const generatedName = ref < String[] > ([])
 
   const filterName = () => {
+
     const element = names.filter(name => options.gender === name.gender)
       .filter(name => name.popularity === options.popularity)
       .filter(name => {
@@ -49,6 +51,7 @@
       buttons: [Length.LONG, Length.SHORT, Length.ALL]
     }
   ]
+  
 </script>
 
 <template>

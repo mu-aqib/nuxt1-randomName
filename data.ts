@@ -14,13 +14,13 @@ export enum Gender {
 
 export enum Popularity {
     TRENDY = "Trendy",
-        UNIQUE = "Unique",
+    UNIQUE = "Unique",
 }
 
 export enum Length {
     SHORT = "Short",
-        LONG = "Long",
-        ALL = "All",
+    LONG = "Long",
+    ALL = "All",
 }
 
 export const names: Name[] = [{

@@ -2,7 +2,7 @@
 interface Name{
     generatedName: String[]    //Array of strings
 }
-    let props = defineProps<Name>()
+defineProps<Name>()
 </script>
 
 <template>
